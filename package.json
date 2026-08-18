@@ -16,6 +16,10 @@
     "cordis.patch.yml",
     "README.md"
   ],
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "schemastery": "^3.18.0"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
