@@ -1,0 +1,6 @@
+# dsh-mcp-manager bundle patch: mounts the host plugin into the web profile.
+# The client half is declared in package.json `dsh.client` and served by the
+# harness as /plugins/dsh-mcp-manager/client.js.
+- insert:
+    - id: mcp-manager
+      name: 'dsh-mcp-manager'

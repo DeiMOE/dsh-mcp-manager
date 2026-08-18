@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# build artifacts (regenerate with: node build-client.mjs)
+dynamic-client.js
+dynamic-host.js
+dynamic-host-body.js
+
+# runtime debug log (written by the installed copy)
+mcp-manager-debug.log
+
+# OS cruft
+.DS_Store
