@@ -4,6 +4,7 @@
  */
 import { strict as assert } from 'node:assert'
 import { readFile } from 'node:fs/promises'
+import { join } from 'node:path'
 import {
   normalizeTriState,
   normalizeWorkspaceFile,
@@ -133,7 +134,7 @@ ok('scan-inventory shape + workspace tool off -> denies that tool', () => {
 })
 
 console.log('== parsePatchServers (real profile patch) ==')
-const realPatch = await readFile('/Users/deimoe/.dsh/profiles/web/cordis.patch.yml', 'utf8')
+const realPatch = await readFile(join(process.env.HOME || process.cwd(), '.dsh', 'profiles', 'web', 'cordis.patch.yml'), 'utf8')
 const realServers = parsePatchServers(realPatch)
 ok('parses the real patch file rows', () => {
   assert.ok(realServers.length >= 1)
